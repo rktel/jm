@@ -19,7 +19,7 @@ const data = {
 
 connection.connect();
 
-connection.query(`"CALL SP_INSERT_DATA (${data.placa},${data.latitud},${data.longitud},${data.rumbo},${data.velocidad},${data.evento},${data.fecha},${data.fechaemv});"`, function (error, results, fields) {
+connection.query('CALL SP_INSERT_DATA (?,?,?,?,?,?,?,?);',[data.placa,data.latitud, data.longitud, data.rumbo, data.velocidad, data.evento, data.fecha, data.fechaemv], function (error, results, fields) {
     if (error) throw error;
     console.log('The solution is: ', results);
   }); 
@@ -39,5 +39,10 @@ connection.query('SELECT * FROM data', function (error, results, fields) {
   console.log('The solution is: ', results);
 }); 
 
+connection.query('CALL SP_INSERT_DATA (`${data.placa}`,${data.latitud},${data.longitud},${data.rumbo},${data.velocidad},${data.evento},${data.fecha},${data.fechaemv});', function (error, results, fields) {
+    if (error) throw error;
+    console.log('The solution is: ', results);
+  }); 
+    
 
 */
