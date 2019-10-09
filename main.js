@@ -13,13 +13,13 @@ const data = {
     rumbo:"90",
     velocidad:"56",
     evento:"ST",
-    fecha:"2019-11-07 12:45:00",
-    fechaemv:"2019-11-08 12:00:22"
+    fecha:"2019-09-07 12:45:00",
+    fechaemv:"2019-09-08 12:00:22"
 }
 
 connection.connect();
 
-connection.query(`CALL SP_INSERT_DATA (${data.placa},${data.latitud},${data.longitud},${data.rumbo},${data.velocidad},${data.evento},${data.fecha},${data.fechaemv});`, function (error, results, fields) {
+connection.query(`"CALL SP_INSERT_DATA (${data.placa},${data.latitud},${data.longitud},${data.rumbo},${data.velocidad},${data.evento},${data.fecha},${data.fechaemv});"`, function (error, results, fields) {
     if (error) throw error;
     console.log('The solution is: ', results);
   }); 
