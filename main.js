@@ -7,14 +7,14 @@ var connection = mysql.createConnection({
 });
 
 const data = {
-    placa: 'WSE-989',
-    latitud:'-13.9999',
-    longitud:'-76.5555',
-    rumbo:'90',
-    velocidad:'56',
-    evento:'ST',
-    fecha:'2019-11-07 12:45:00',
-    fechaemv:'2019-11-08 12:00:22'
+    placa: "WSE-989",
+    latitud:"-13.9999",
+    longitud:"-76.5555",
+    rumbo:"90",
+    velocidad:"56",
+    evento:"ST",
+    fecha:"2019-11-07 12:45:00",
+    fechaemv:"2019-11-08 12:00:22"
 }
 
 connection.connect();
