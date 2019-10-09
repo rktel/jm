@@ -13,8 +13,8 @@ const data = {
     rumbo:'90',
     velocidad:'56',
     evento:'ST',
-    fecha:'2019-11-08 12:00:00',
-    fechaemv:'2019-11-08 12:00:00'
+    fecha:'2019-11-07 12:45:00',
+    fechaemv:'2019-11-08 12:00:22'
 }
 
 connection.connect();
