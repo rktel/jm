@@ -18,13 +18,14 @@ const data = {
   fechaemv: "2019-09-08 12:00:22"
 }
 */
+connection.connect();
 function insertData(data) {
-  connection.connect();
+ 
   connection.query('CALL SP_INSERT_DATA (?,?,?,?,?,?,?,?);', [data.placa, data.latitud, data.longitud, data.rumbo, data.velocidad, data.evento, data.fecha, getTimestamp()], function (error, results, fields) {
     if (error) throw error;
     console.log('The solution is: ', results);
   });
-  connection.end();
+ // connection.end();
 }
 
 
