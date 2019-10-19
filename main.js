@@ -21,11 +21,14 @@ const data = {
 connection.connect();
 function insertData(data) {
  
-  connection.query('CALL SP_INSERT_DATA (?,?,?,?,?,?,?,?);', [data.placa, data.latitud, data.longitud, data.rumbo, data.velocidad, data.evento, data.fecha, getTimestamp()], function (error, results, fields) {
-    if (error) throw error;
-    // console.log('The solution is: ', results);
-  });
- // connection.end();
+  if(data.placa){
+    connection.query('CALL SP_INSERT_DATA (?,?,?,?,?,?,?,?);', [data.placa, data.latitud, data.longitud, data.rumbo, data.velocidad, data.evento, data.fecha, getTimestamp()], function (error, results, fields) {
+      if (error) throw error;
+      // console.log('The solution is: ', results);
+    });
+    // connection.end();
+  }
+
 }
 
 
